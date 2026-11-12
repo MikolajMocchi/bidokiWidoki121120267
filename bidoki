@@ -1,0 +1,6 @@
+--zad 1
+CREATE VIEW aktywni_klienci as 
+SELECT k.imie, k.nazwisko, w.data_wypozyczenia 
+FROM wypozyczenia w 
+INNER JOIN klienci k ON w.id_klienta = k.id_klienta 
+WHERE data_wypozyczenia > "2026-01-01";
